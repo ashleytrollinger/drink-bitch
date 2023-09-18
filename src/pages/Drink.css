@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Basic';
+    src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
+}
+
+p {
+    text-align: center;
+    padding-bottom: 1vh;
+    margin-top: -2vh;
+    font-family: 'Basic', sans-serif;
+    font-size: 2vh;
+}

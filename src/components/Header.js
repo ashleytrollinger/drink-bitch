@@ -1,8 +1,12 @@
 import React from 'react';
+import HeaderI from '../images/Header.png';
+import './Header.css';
 
 function Header() {
     return (
-        <h1>Drink Bitch</h1>
+        <header className='header-container'>
+            <img src={HeaderI} alt="Header" />
+        </header>
     )
 }
 export default Header;

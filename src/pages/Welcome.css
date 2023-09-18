@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Crosant';
+    src: url('../fonts/Croissant_One/CroissantOne-Regular.ttf') format('truetype')
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -7vh;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(12px 12px 7px rgba(57, 3, 39, 0.989));
+}
+
+.link-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-section button {
+    font-size: 5vh;
+    border-radius: 25px;
+    margin-top: 5vh;
+    padding: .25em;
+    background-color: #7d136c;
+    color: rgb(234, 222, 234);
+    font-family: 'Crosant', sans-serif;
+    border: none;
+}
+
+@media (max-width:900px) {
+    .link-section button {
+        font-size: 3vh;
+    }
+}

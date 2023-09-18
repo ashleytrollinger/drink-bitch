@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Basic';
+    src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Crosant';
+    src: url('../fonts/Croissant_One/CroissantOne-Regular.ttf') format('truetype')
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Basic', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 650px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .spinBtn {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color:  rgba(234, 222, 234, 0.785);
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    font-size: 4vh;
+    font-family: 'Crosant', sans-serif;
+}
+
+.container .spinBtn::before {
+    content: '';
+    position: absolute;
+    top: -28px;
+    width: 20px;
+    height: 30px;
+    background: rgba(234, 222, 234, 0.785);
+    clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+
+.container .wheel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #333, 0 0 0 15px black, 0 0 0 18px #111;
+    transition: transform 3s ease-in-out;
+}
+
+.container .wheel .sips {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(45deg * var(--i)));
+    clip-path: polygon(0 0, 58% 0, 100% 100%, 0 58%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.container .wheel .sips span {
+    position: relative;
+    transform: rotate(45deg);
+    font-size: 3vh;
+}
+
+@media (max-width: 875px) {
+    .container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .spinBtn {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background-color: white;
+        border-radius: 50%;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        font-size: 3vh;
+    }
+
+    .container .wheel .sips span {
+        position: relative;
+        transform: rotate(45deg);
+        font-size: 1.75vh;
+    }
+}

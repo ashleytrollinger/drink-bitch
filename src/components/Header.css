@@ -1,0 +1,10 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container img {
+    max-width: 100%;
+    height: auto;
+}

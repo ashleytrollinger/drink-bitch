@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useHistory to handle navigation
+import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
+import './Setup.css';
 
 function Setup() {
     const navigate = useNavigate();
@@ -9,6 +11,7 @@ function Setup() {
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedDifficulty, setSelectedDifficulty] = useState('');
 
+
     const handleStartTrivia = () => {
         // Construct the API URL based on user selections
         const apiUrl = `https://opentdb.com/api.php?amount=${numQuestions}&category=${selectedCategory}&difficulty=${selectedDifficulty}`;
@@ -17,10 +20,7 @@ function Setup() {
         fetch(apiUrl)
             .then((response) => response.json())
             .then((data) => {
-                // Handle the response and navigate to the Question.js page with the first question
-                // For now, let's assume you store the fetched questions in a variable called "questions"
-                const questions = data.results; // Adjust this based on the API response structure
-                // Navigate to the Question.js page with the first question
+                const questions = data.results; 
                 navigate(`/question/${1}`, { state: { questions } });
             })
             .catch((error) => {
@@ -33,35 +33,37 @@ function Setup() {
     };
 
     return (
-        <div>
-            <h2>Setup</h2>
-            <form>
-                <div>
-                    <label>How many questions do you want to try? (1-50)</label>
-                    <input
-                        type="number"
-                        min="1"
-                        max="50"
-                        value={numQuestions}
-                        onChange={(e) => setNumQuestions(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label>Select a category:</label>
-                    <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
-                        <option value="12">Music</option>
-                        <option value="26">Celebrities</option>
-                        <option value="27">Animals</option>
-                        <option value="20">Mythology</option>
-                        <option value="21">Sports</option>
-                        <option value="19">Math</option>
-                        <option value="23">History</option>
-                        <option value="22">Geography</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Select difficulty:</label>
+        <>
+            <Header />
+            <div className='setup-container'>
+                <h2>create your trivia</h2>
+                <form className='form-container'>
                     <div>
+                        <label>How many questions do you want to try? (1-50)</label>
+                        <input
+                            type="number"
+                            min="1"
+                            max="50"
+                            value={numQuestions}
+                            onChange={(e) => setNumQuestions(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <label>Select a category:</label>
+                        <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+                            <option value="12">Music</option>
+                            <option value="26">Celebrities</option>
+                            <option value="27">Animals</option>
+                            <option value="20">Mythology</option>
+                            <option value="21">Sports</option>
+                            <option value="19">Math</option>
+                            <option value="23">History</option>
+                            <option value="22">Geography</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Select difficulty:</label>
+
                         <input
                             type="radio"
                             id="easy"
@@ -71,8 +73,7 @@ function Setup() {
                             onChange={handleDifficultyChange}
                         />
                         <label htmlFor="easy">Easy</label>
-                    </div>
-                    <div>
+
                         <input
                             type="radio"
                             id="medium"
@@ -82,8 +83,7 @@ function Setup() {
                             onChange={handleDifficultyChange}
                         />
                         <label htmlFor="medium">Medium</label>
-                    </div>
-                    <div>
+
                         <input
                             type="radio"
                             id="hard"
@@ -93,13 +93,16 @@ function Setup() {
                             onChange={handleDifficultyChange}
                         />
                         <label htmlFor="hard">Hard</label>
+
                     </div>
-                </div>
-                <button type="button" onClick={handleStartTrivia}>
-                    Start Trivia
-                </button>
-            </form>
-        </div>
+                    <div className='start-t-div'>
+                        <button type="button" onClick={handleStartTrivia} className='start-trivia'>
+                            Start Trivia
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </>
     );
 }
 
