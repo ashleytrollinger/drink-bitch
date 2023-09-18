@@ -10,6 +10,7 @@ function Setup() {
     const [numQuestions, setNumQuestions] = useState(10); // Default to 10 questions
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedDifficulty, setSelectedDifficulty] = useState('');
+    const [fetchedQuestions, setFetchedQuestions] = useState(null);
 
 
     const handleStartTrivia = () => {
@@ -21,6 +22,7 @@ function Setup() {
             .then((response) => response.json())
             .then((data) => {
                 const questions = data.results; 
+                setFetchedQuestions(questions);
                 navigate(`/question/${1}`, { state: { questions } });
             })
             .catch((error) => {

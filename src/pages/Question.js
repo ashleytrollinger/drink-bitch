@@ -18,6 +18,7 @@ function Question() {
     const navigate = useNavigate();
     const location = useLocation();
     const questions = location.state?.questions;
+    console.log('q'+questions);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [shuffledAnswers, setShuffledAnswers] = useState([]);
     const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
