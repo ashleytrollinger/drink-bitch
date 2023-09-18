@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Header from '../components/Header'
 import Timer from '../components/Timer';
+import Drink from './Drink';
 import './Question.css';
 
 function shuffleArray(array) {
@@ -15,14 +16,13 @@ function shuffleArray(array) {
 }
 
 function Question() {
-    const navigate = useNavigate();
     const location = useLocation();
     const questions = location.state?.questions;
-    console.log('q'+questions);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [shuffledAnswers, setShuffledAnswers] = useState([]);
     const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
     const [timerKey, setTimerKey] = useState(0); // Add a key for the Timer component
+    const [showDrink, setShowDrink] = useState(false);
 
     useEffect(() => {
         if (questions && questions[currentQuestionIndex]) {
@@ -41,15 +41,16 @@ function Question() {
             setIsAnswerCorrect(true);
             setTimeout(() => {
                 goToNextQuestion();
-            }, 1000); // Change color for 1 second and then move to the next question
+            }, 100); // Change color for 1 second and then move to the next question
         } else {
             setIsAnswerCorrect(false);
             setTimeout(() => {
-                navigate('/drink');
+                setShowDrink(true);
                 setTimeout(() => {
+                    setShowDrink(false);
                     goToNextQuestion();
-                }, 1000); // Move to the next question after 1 second
-            }, 1000); // Go to the Drink page for 1 second
+                }, 60000); // Move to the next question after 1 second
+            }, 100); // Go to the Drink page for 1 second
         }
     };
 
@@ -57,8 +58,7 @@ function Question() {
     const goToNextQuestion = () => {
         if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
-            setIsAnswerCorrect(null); // Reset the answer correctness state
-            // Increment the key to reset the Timer component
+            setIsAnswerCorrect(null);
             setTimerKey(timerKey + 1);
         } else {
             // Handle end of questions, e.g., show a completion message
@@ -67,18 +67,19 @@ function Question() {
 
     // Function to navigate to 'drink.js' on timeout
     const handleTimeout = () => {
-        navigate('/drink');
-        // Optionally, you can add a setTimeout here to move to the next question after a delay
-        // setTimeout(() => {
-        //     goToNextQuestion();
-        // }, 1000);
+        setShowDrink(true); // Show the drink component
+        setTimeout(() => {
+            setShowDrink(false); // Hide the drink component after a delay
+            goToNextQuestion();
+        }, 5000);
     };
 
     return (
         <>
             <Header />
-            <div className='question-container'>
-                {questions ? (
+            <div className='question-container' style={{ display: showDrink ? 'none' : 'block' }}>
+            {
+                questions?(
                     <div>
                         <Timer key={timerKey} initialTime={30} onTimeout={handleTimeout} />
                         <h2>Question {currentQuestionIndex + 1}</h2>
@@ -98,10 +99,12 @@ function Question() {
                             ))}
                         </ul>
                     </div>
-                ) : (
-                    <p>No question data available.</p>
-                )}
-            </div>
+    ) : (
+        <p>No question data available.</p>
+    )
+}
+            </div >
+    { showDrink && <Drink />} 
         </>
     );
 }

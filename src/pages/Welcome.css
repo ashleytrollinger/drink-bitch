@@ -3,6 +3,11 @@
     src: url('../fonts/Croissant_One/CroissantOne-Regular.ttf') format('truetype')
 }
 
+@font-face {
+    font-family: 'Basic';
+    src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
+}
+
 .image-container {
     display: flex;
     justify-content: center;
@@ -31,6 +36,24 @@
     color: #f4eff4;
     font-family: 'Crosant', sans-serif;
     border: none;
+}
+
+.wtf {
+    display: flex;
+    justify-content: center;
+
+}
+
+.wtf button {
+    font-size: 3vh;
+    border: none;
+    margin-top: 5px;
+    padding: .25em;
+    font-family: 'Basic', sans-serif;
+}
+
+.wtf button:hover {
+    text-decoration: underline;
 }
 
 @media (max-width:900px) {

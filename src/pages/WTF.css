@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Basic';
+    src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
+}
+
+.wtf-container h2 {
+    text-align: center;
+    font-family: 'Basic', sans-serif;
+    font-size: 4vh;
+}
+
+.wtf-container p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.wtf {
+    display: flex;
+    justify-content: center;
+
+}
+
+.wtf button {
+    font-size: 3vh;
+    border: none;
+    margin-top: 5px;
+    padding: .25em;
+    font-family: 'Basic', sans-serif;
+}
+
+.wtf button:hover {
+    text-decoration: underline;
+}

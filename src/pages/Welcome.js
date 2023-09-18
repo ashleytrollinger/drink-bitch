@@ -17,6 +17,12 @@ function Welcome() {
                 <button>Get Started →</button>
             </Link>
             </section>
+            <section className='wtf'>
+            <Link to="/WTF">
+                <button >WTF is This?</button>
+            </Link>
+            </section>
+  
 
         </>
     );
