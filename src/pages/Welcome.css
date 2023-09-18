@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -7vh;
+    margin-top: -13vh;
 }
 
 .image-container img {
@@ -56,7 +56,10 @@
     text-decoration: underline;
 }
 
-@media (max-width:900px) {
+@media (max-width:912px) {
+    .image-container{
+        margin-top: -7vh;;
+    }
     .link-section button {
         font-size: 3vh;
     }

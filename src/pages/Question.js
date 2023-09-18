@@ -49,7 +49,7 @@ function Question() {
                 setTimeout(() => {
                     setShowDrink(false);
                     goToNextQuestion();
-                }, 60000); // Move to the next question after 1 second
+                }, 20000); // Move to the next question after 1 second
             }, 100); // Go to the Drink page for 1 second
         }
     };

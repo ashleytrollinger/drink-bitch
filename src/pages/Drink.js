@@ -4,20 +4,27 @@ import './Drink.css';
 
 function Drink() {
     const [isVisible, setIsVisible] = useState(true);
+    const [countdown, setCountdown] = useState(20);
 
     useEffect(() => {
+        const timer = setInterval(() => {
+            setCountdown(prevCountdown => prevCountdown - 1);
+        }, 1000);
 
-        const timer = setTimeout(() => {
+        if (countdown === 0) {
             setIsVisible(false);
-        }, 5000);
+            clearInterval(timer);
+        }
+
         return () => {
-            clearTimeout(timer);
+            clearInterval(timer);
         };
-    }, []);
+    }, [countdown]);
+
     return (
         <>
             <div className={`drink-container ${isVisible ? 'visible' : 'hidden'}`}>
-                <p>Next question will appear in exactly 1 minute.</p>
+                <p>Next question will appear in exactly {countdown} seconds.</p>
                 <Spinner />
             </div>
         </>
@@ -25,5 +32,3 @@ function Drink() {
 }
 
 export default Drink;
-
-
