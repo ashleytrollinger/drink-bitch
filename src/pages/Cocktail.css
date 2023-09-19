@@ -27,12 +27,12 @@
 .back {
     font-size: 2vh;
     border-radius: 45px;
-    border: none;
-    margin-top: 1.5vh;
-    padding: .45em;
-    background-color: #7d136c;
+    border: 1px solid #7d136bba;
+    margin-top: 3vh;
+    padding: 0.45em;
+    background-color: #7d136bba;
     font-family: 'Crosant', sans-serif;
-    color: #fff;
+    color: #F4EFF4;
 }
 
 .cocktail h1 {

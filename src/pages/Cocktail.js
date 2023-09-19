@@ -106,11 +106,6 @@ function Cocktail() {
     return (
         <div>
             <Header /> {/* Add the Header component */}
-            <section className='back-section'>
-                <Link to='/'>
-                    <button className='back'>←Back</button>
-                </Link>
-            </section>
             <section className='cocktail'>
                 <button onClick={fetchRandomCocktail}>Generate Random Cocktail</button>
                 {randomCocktail && !selectedLiquor && (
@@ -134,6 +129,11 @@ function Cocktail() {
                     </div>
                 )}
             </section >
+            <section className='back-section'>
+                <Link to='/'>
+                    <button className='back'>←Back to Home</button>
+                </Link>
+            </section>
         </div>
     );
 }

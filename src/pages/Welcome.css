@@ -25,14 +25,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:10px;
+    gap: 15px;
 }
 
 .link-section button {
-    font-size: 5vh;
+    font-size: 4vh;
     border-radius: 25px;
     margin-top: 5vh;
-    padding: .25em;
+    padding: .35em;
     background-color: #7d136c;
     color: #f4eff4;
     font-family: 'Crosant', sans-serif;
@@ -51,6 +51,7 @@
     margin-top: 5px;
     padding: .25em;
     font-family: 'Basic', sans-serif;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .wtf button:hover {
@@ -58,9 +59,11 @@
 }
 
 @media (max-width:912px) {
-    .image-container{
-        margin-top: -7vh;;
+    .image-container {
+        margin-top: -7vh;
+        ;
     }
+
     .link-section button {
         font-size: 3vh;
     }
