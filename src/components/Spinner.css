@@ -82,7 +82,7 @@
     font-size: 3vh;
 }
 
-@media (max-width: 875px) {
+@media (max-width: 912px) {
     .container {
         position: relative;
         width: 300px;

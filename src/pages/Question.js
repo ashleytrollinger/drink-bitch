@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header'
 import Timer from '../components/Timer';
 import Drink from './Drink';
@@ -23,6 +24,7 @@ function Question() {
     const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
     const [timerKey, setTimerKey] = useState(0); // Add a key for the Timer component
     const [showDrink, setShowDrink] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (questions && questions[currentQuestionIndex]) {
@@ -61,6 +63,7 @@ function Question() {
             setIsAnswerCorrect(null);
             setTimerKey(timerKey + 1);
         } else {
+            navigate('/finished')
             // Handle end of questions, e.g., show a completion message
         }
     };
@@ -77,34 +80,39 @@ function Question() {
     return (
         <>
             <Header />
+            <section className='back-to-menu'>
+                <Link to="/setup">
+                    <button>← Back to Setup</button>
+                </Link>
+            </section>
             <div className='question-container' style={{ display: showDrink ? 'none' : 'block' }}>
-            {
-                questions?(
-                    <div>
-                        <Timer key={timerKey} initialTime={30} onTimeout={handleTimeout} />
-                        <h2>Question {currentQuestionIndex + 1}</h2>
-                        <p className='question-text'>{questions[currentQuestionIndex].question.replace(/&quot;/g, '"')
-                            .replace(/&#039;/g, "'")}
-                        </p>
-                        <ul className='answer-list'>
-                            {shuffledAnswers.map((answer, index) => (
-                                <li key={index}>
-                                    <button
-                                        onClick={() => handleAnswerClick(answer)}
-                                        className={isAnswerCorrect === null ? '' : isAnswerCorrect ? 'correct' : 'incorrect'}
-                                    >
-                                        {answer}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-    ) : (
-        <p>No question data available.</p>
-    )
-}
+                {
+                    questions ? (
+                        <div>
+                            <Timer key={timerKey} initialTime={30} onTimeout={handleTimeout} />
+                            <h2>Question {currentQuestionIndex + 1}</h2>
+                            <p className='question-text'>{questions[currentQuestionIndex].question.replace(/&quot;/g, '"')
+                                .replace(/&#039;/g, "'")}
+                            </p>
+                            <ul className='answer-list'>
+                                {shuffledAnswers.map((answer, index) => (
+                                    <li key={index}>
+                                        <button
+                                            onClick={() => handleAnswerClick(answer)}
+                                            className={isAnswerCorrect === null ? '' : isAnswerCorrect ? 'correct' : 'incorrect'}
+                                        >
+                                            {answer}
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ) : (
+                        <p>No question data available.</p>
+                    )
+                }
             </div >
-    { showDrink && <Drink />} 
+            {showDrink && <Drink />}
         </>
     );
 }

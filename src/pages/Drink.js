@@ -23,10 +23,12 @@ function Drink() {
 
     return (
         <>
-            <div className={`drink-container ${isVisible ? 'visible' : 'hidden'}`}>
-                <p>Next question will appear in exactly {countdown} seconds.</p>
-                <Spinner />
-            </div>
+            <section className='p'>
+                <div className={`drink-container ${isVisible ? 'visible' : 'hidden'}`}>
+                    <p>Next question will appear in exactly {countdown} seconds.</p>
+                    <Spinner />
+                </div>
+            </section>
         </>
     );
 }

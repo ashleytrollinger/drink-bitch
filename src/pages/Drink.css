@@ -3,9 +3,9 @@
     src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
 }
 
-p {
+.p p {
     text-align: center;
-    padding-bottom: 1vh;
+    padding-bottom: 10vh;
     margin-top: -2vh;
     font-family: 'Basic', sans-serif;
     font-size: 2.5vh;

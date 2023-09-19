@@ -9,7 +9,7 @@
 }
 
 .setup-container {
-    margin-top:-2vh;
+    margin-top: -2vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,9 +75,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3px;
 }
 
-.start-trivia {
+.start-t-div button {
     font-size: 3vh;
     border-radius: 45px;
     border: none;
@@ -86,4 +87,26 @@
     background-color: #7d136c;
     font-family: 'Crosant', sans-serif;
     color: #fff;
+}
+
+.homebtn button{
+    font-size: 2vh;
+    border-radius: 45px;
+    border: 1px solid #7d136bba;
+    margin-top: 3vh;
+    padding: .45em;
+    background-color: #7d136bba;
+    font-family: 'Crosant', sans-serif;
+    color: #F4EFF4; 
+}
+
+.homebtn button:hover{
+    font-size: 2vh;
+    border-radius: 45px;
+    border: 1px solid #7d136bba;
+    margin-top: 3vh;
+    padding: .45em;
+    background-color: #F4EFF4;
+    font-family: 'Crosant', sans-serif;
+    color: #7d136bba; 
 }

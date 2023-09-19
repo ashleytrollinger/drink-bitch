@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import './Setup.css';
 
@@ -103,6 +103,9 @@ function Setup() {
                         </button>
                     </div>
                 </form>
+                <Link to='/' className='homebtn'>
+                    <button>← Back to Home</button>
+                </Link>
             </div>
         </>
     );

@@ -12,6 +12,9 @@
 .wtf-container p {
     margin-right: 10px;
     margin-left: 10px;
+    text-align: center;
+    font-family: 'Basic', sans-serif;
+    font-size: 2.3vh;
 }
 
 .wtf {
@@ -20,14 +23,3 @@
 
 }
 
-.wtf button {
-    font-size: 3vh;
-    border: none;
-    margin-top: 5px;
-    padding: .25em;
-    font-family: 'Basic', sans-serif;
-}
-
-.wtf button:hover {
-    text-decoration: underline;
-}

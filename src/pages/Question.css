@@ -8,6 +8,30 @@
     src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
 }
 
+.back-to-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-to-menu button {
+    font-size: 2vh;
+    border-radius: 45px;
+    border: 2px solid #7d136c;
+    margin-top: -10vh;
+    margin-bottom: 3vh;
+    padding: .45em;
+    background-color: #7d136c;
+    font-family: 'Crosant', sans-serif;
+    color: #fff;
+}
+
+.back-to-menu button:hover {
+    border: 2px solid #7d136c;
+    color: #7d136c;
+    background-color: #F4EFF4;
+}
+
 .question-container {
     display: flex;
     flex-direction: column;
@@ -58,15 +82,15 @@
     cursor: pointer;
     font-size: 4vh;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color: #F4EFF4;
     /* Default background color for buttons */
     color: #000;
     font-family: 'Basic', sans-serif;
 }
 
-.question-container button:hover{
+.question-container button:hover {
     background-color: #7d136c;
-    color:  rgb(234, 222, 234);
+    color: rgb(234, 222, 234);
 }
 
 .correct {
@@ -81,9 +105,10 @@
         margin-left: 10vw;
     }
 
-    .question-text{
+    .question-text {
         font-size: 2vh;
     }
+
     .question-container button {
         font-size: 2vh;
         padding: 5px 10px;

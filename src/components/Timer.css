@@ -8,6 +8,7 @@
     font-family: 'Basic', sans-serif;
     font-size: 3.5vh;
     color: #7d136c;
+    text-align: center;
 }
 
 @media (max-width:875px) {

@@ -13,16 +13,22 @@ function Welcome() {
                 <img src={WelcomeI} alt="Hand holding a glass of wine with a best friends bracelet." />
             </section>
             <section className='link-section'>
-            <Link to="/setup">
-                <button>Get Started →</button>
-            </Link>
+                <Link to="/setup">
+                    <button>Trivia →</button>
+                </Link>
+                <Link to='/wordGuess'>
+                    <button>Word Guess →</button>
+                </Link>
+                <Link to='/cocktails'>
+                    <button type='button'>I need a Drink</button>
+                </Link>
             </section>
             <section className='wtf'>
-            <Link to="/WTF">
-                <button >WTF is This?</button>
-            </Link>
+                <Link to="/WTF">
+                    <button >WTF is This?</button>
+                </Link>
             </section>
-  
+
 
         </>
     );

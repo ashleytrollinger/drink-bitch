@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Basic';
+    src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Crosant';
+    src: url('../fonts/Croissant_One/CroissantOne-Regular.ttf') format('truetype')
+}
+
+
+.cocktail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Basic', sans-serif;
+}
+
+.back-section {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.back {
+    font-size: 2vh;
+    border-radius: 45px;
+    border: none;
+    margin-top: 1.5vh;
+    padding: .45em;
+    background-color: #7d136c;
+    font-family: 'Crosant', sans-serif;
+    color: #fff;
+}
+
+.cocktail h1 {
+    font-size: 3.5vh;
+    margin: 0;
+    font-weight: 700;
+}
+
+.cocktail h2 {
+    font-size: 3vh;
+    margin-top: 1vh;
+    margin-bottom: 0;
+}
+
+.cocktail button {
+    font-size: 3vh;
+    border-radius: 45px;
+    border: none;
+    margin-top: 1.5vh;
+    padding: .45em;
+    background-color: #7d136c;
+    font-family: 'Crosant', sans-serif;
+    color: #fff;
+}
+
+
+.cocktail select {
+    font-size: 3vh;
+    margin-top: 1vh;
+    border-radius: 45px;
+    border: none;
+    margin-top: 1.5vh;
+    margin-bottom: 2vh;
+    padding: .45em;
+    background-color: #7d136c;
+    font-family: 'Crosant', sans-serif;
+    color: #fff;
+}
+
+/* Container for the drink information */
+.cocktail .drink-info {
+    background-color: transparent;
+    border-radius: 10px;
+    background-color: rgb(234, 222, 234);
+    box-shadow: 0px 0px 10px rgba(57, 3, 39, 0.989);
+    padding: 20px;
+    width: 90vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Style for the drink image */
+.cocktail .drink-info img {
+    max-width: 30vw;
+    height: auto;
+    flex: 1;
+    width: 30%;
+    box-shadow: 0px 0px 10px rgba(57, 3, 39, 0.989);
+}
+
+.cocktail .drink-info .drink-txt {
+    flex: 2;
+    width: 70%;
+}
+
+
+.cocktail .drink-info h3 {
+    font-size: 4vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+
+.cocktail .drink-info h4 {
+    font-size: 2.5vh;
+    margin-top: 1vh;
+}
+
+.cocktail .drink-info p {
+    margin-bottom: 2vh;
+    padding: 0;
+}
+
+.cocktail .drink-info ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+
+.cocktail .drink-info li {
+    margin: 0;
+    padding: 0;
+    font-size: 2.2vh;
+}
+
+@media (max-width:912px) {
+    .cocktail .drink-info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

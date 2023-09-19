@@ -5,6 +5,9 @@ import Setup from './pages/Setup';
 import Question from './pages/Question';
 import Drink from './pages/Drink';
 import WTF from './pages/WTF';
+import Done from './pages/Done';
+import Cocktail from './pages/Cocktail';
+import Wordguess from './pages/Wordguess';
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
           <Route path="/question/:questionNumber" element={<Question />} />
           <Route path="/drink" element={<Drink />} />
           <Route path="/WTF" element={<WTF />} />
+          <Route path="/finished" element={<Done />} />
+          <Route path="/cocktails" element={<Cocktail />} />
+          <Route path="/wordGuess" element={<Wordguess />} />
         </Routes>
       </div>
     </Router>
