@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, Link} from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Header from "../components/Header";
 import './Wordguess.css';
 import Drink from './Drink';
@@ -268,7 +268,7 @@ function Wordguess() {
     const [gameOver, setGameOver] = useState(false);
     const [wrongGuesses, setWrongGuesses] = useState(0);
     const navigate = useNavigate();
-    const [showDrink, setShowDrink] = useState(false); 
+    const [showDrink, setShowDrink] = useState(false);
 
     useEffect(() => {
         if (wrongGuesses >= 3) {
@@ -277,10 +277,10 @@ function Wordguess() {
 
             const timeoutId = setTimeout(() => {
                 setShowDrink(false);
-                restartGameFunction(); 
+                restartGameFunction();
             }, 20000);
 
-     
+
             return () => clearTimeout(timeoutId);
             restartGameFunction();
         }
@@ -352,69 +352,73 @@ function Wordguess() {
     return (
         <>
             <Header />
-            <div className="container">
-                <h1>WORD GUESS GAME</h1>
-                <div className="game-container">
-                    <div className="word-container">
-                        {Array.from(wordData.word).map((letter, index) => (
-                            <div
-                                key={index}
-                                className={`letter ${chosenLetters.includes(letter) ? "visible" : ""
-                                    }`}
-                            >
-                                {chosenLetters.includes(letter) ? letter : ""}
+            {showDrink ? (
+                <Drink />
+            ) : (
+                <div className="container">
+                    <h1>WORD GUESS GAME</h1>
+                    <div className="game-container">
+                        <div className="word-container">
+                            {Array.from(wordData.word).map((letter, index) => (
+                                <div
+                                    key={index}
+                                    className={`letter ${chosenLetters.includes(letter) ? "visible" : ""
+                                        }`}
+                                >
+                                    {chosenLetters.includes(letter) ? letter : ""}
+                                </div>
+                            ))}
+                        </div>
+                        <p className="word-description">{wordData.description}</p>
+                        {msg && (
+                            <div className="message">
+                                <p>{msg}</p>
+                                {displayWord && <p>Correct word was: {wordData.word}</p>}
                             </div>
-                        ))}
-                    </div>
-                    <p className="word-description">{wordData.description}</p>
-                    {msg && (
-                        <div className="message">
-                            <p>{msg}</p>
-                            {displayWord && <p>Correct word was: {wordData.word}</p>}
-                        </div>
-                    )}
-                    <div className="button-section">
-                        <div className="guess-section">
-                            <button onClick={restartGameFunction} className="restart-button">
-                                New Word
-                            </button>
-                            <button
-                                onClick={removeCharacterFunction}
-                                disabled={!chosenLetters.length}
-                                className="remove-button"
-                            >
-                                Remove Letter
-                            </button>
-                        </div>
-                        <div className="letter-selection">{displayLettersFunction()}</div>
-                        <div className="hints">
-                            Hints Remaining: {hints}{" "}
-                            <button
-                                onClick={hintFunction}
-                                disabled={hints === 0}
-                                className="hint-button"
-                            >
-                                Get Hint
-                            </button>
-                        </div>
-                        {!msg && (
-                            <button
-                                onClick={guessFunction}
-                                disabled={!chosenLetters.length}
-                                className="guess-button"
-                            >
-                                Guess
-                            </button>
                         )}
+                        <div className="button-section">
+                            <div className="guess-section">
+                                <button onClick={restartGameFunction} className="restart-button">
+                                    New Word
+                                </button>
+                                <button
+                                    onClick={removeCharacterFunction}
+                                    disabled={!chosenLetters.length}
+                                    className="remove-button"
+                                >
+                                    Remove Letter
+                                </button>
+                            </div>
+                            <div className="letter-selection">{displayLettersFunction()}</div>
+                            <div className="hints">
+                                Hints Remaining: {hints}{" "}
+                                <button
+                                    onClick={hintFunction}
+                                    disabled={hints === 0}
+                                    className="hint-button"
+                                >
+                                    Get Hint
+                                </button>
+                            </div>
+                            {!msg && (
+                                <button
+                                    onClick={guessFunction}
+                                    disabled={!chosenLetters.length}
+                                    className="guess-button"
+                                >
+                                    Guess
+                                </button>
+                            )}
+                        </div>
                     </div>
+                    <Link to='/' className='homebtn'>
+                        <button>← Back to Home</button>
+                    </Link>
                 </div>
-                <Link to='/' className='homebtn'>
-                    <button>← Back to Home</button>
-                </Link>
-            </div>
-            {showDrink && <Drink />}
+            )}
         </>
     );
+
 }
 
 export default Wordguess;
