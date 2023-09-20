@@ -6,6 +6,103 @@ import Drink from './Drink';
 
 const sampleWords = [
     {
+        word: "PENGUIN",
+        description: "A tuxedoed waddler of the icy realms."
+    },
+
+    {
+        word: "ELEPHANT",
+        description: "Gentle giant with a trunk of wonder."
+    },
+
+    {
+        word: "DOLPHIN",
+        description: "Graceful acrobat of the deep blue."
+    },
+
+    {
+        word: "TIGER",
+        description: "Striped phantom of the jungle."
+    },
+
+    {
+        word: "OWL",
+        description: "Nocturnal wisdom in feathered form."
+    },
+
+    {
+        word: "BUTTERFLY",
+        description: "Ephemeral beauty in flight."
+    },
+
+    {
+        word: "GIRAFFE",
+        description: "Tower of elegance on the savannah."
+    },
+
+    {
+        word: "KANGAROO",
+        description: "Marsupial hopper of the Outback."
+    },
+
+    {
+        word: "HUMMINGBIRD",
+        description: "Tiny jewel with iridescent wings."
+    },
+
+    {
+        word: "SLOTH",
+        description: "Slow-moving arboreal recluse."
+    },
+    {
+        word: "QUINOA",
+        description: "Nutrient-rich grain with a mild, nutty flavor."
+    },
+
+    {
+        word: "SRIRACHA",
+        description: "Spicy Thai hot sauce with a hint of garlic."
+    },
+
+    {
+        word: "SUSHI",
+        description: "Elegant Japanese dish of vinegared rice and seafood."
+    },
+
+    {
+        word: "BAGUETTE",
+        description: "Long, crusty French bread, perfect for sandwiches."
+    },
+
+    {
+        word: "TAPENADE",
+        description: "Savory spread made from olives, capers, and herbs."
+    },
+
+    {
+        word: "RATATOUILLE",
+        description: "Provincial French stew with a medley of vegetables."
+    },
+
+    {
+        word: "KIMCHI",
+        description: "Korean fermented cabbage with a spicy kick."
+    },
+
+    {
+        word: "GAZPACHO",
+        description: "Chilled Spanish tomato soup with herbs and veggies."
+    },
+
+    {
+        word: "BOPIT",
+        description: "A handheld electronic game that tests reflexes and coordination."
+    },
+    {
+        word: "CANNELLONI",
+        description: "Italian pasta tubes stuffed with cheese or meat."
+    },
+    {
         word: "UNIVERSITY",
         description: "A place of higher education."
     },
@@ -406,7 +503,7 @@ function Wordguess() {
                                     disabled={!chosenLetters.length}
                                     className="guess-button"
                                 >
-                                    Guess
+                                    GUESS
                                 </button>
                             )}
                         </div>

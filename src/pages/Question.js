@@ -89,7 +89,7 @@ function Question() {
                 {
                     questions ? (
                         <div>
-                            <Timer key={timerKey} initialTime={30} onTimeout={handleTimeout} />
+                            <Timer key={timerKey} initialTime={60} onTimeout={handleTimeout} />
                             <h2>Question {currentQuestionIndex + 1}</h2>
                             <p className='question-text'>{questions[currentQuestionIndex].question.replace(/&quot;/g, '"')
                                 .replace(/&#039;/g, "'")}
