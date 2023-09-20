@@ -61,10 +61,19 @@
     display: inline-block;
     margin-right: 10px;
     padding: 10px 20px;
-    border: 3px solid #7d136c;
-    border-radius: 5px;
+    border: 1.5px solid #7d136c;
+    transition: transform 200ms;
+    background: transparent;
+    border-radius: 25px;
     font-size: 3vh;
+    box-shadow: 0 0 0 1px #7d136c inset;
     cursor: pointer;
+}
+
+.form-container label[for="easy"]:hover,
+.form-container label[for="medium"]:hover,
+.form-container label[for="hard"]:hover {
+    transform: translateY(-2px);
 }
 
 .form-container input[type="radio"]:checked+label {
@@ -85,10 +94,11 @@
     padding: 8px 16px;
     margin: 0;
     margin-right: 3px;
+    margin-top: 1vh;
     margin-bottom: 1vh;
     border: solid 2px #7d136c;
     cursor: pointer;
-    font-size: 3vh;
+    font-size: 3.2vh;
     border-radius: 15px;
     background-color: transparent;
     color: #7d136c;
@@ -116,7 +126,7 @@
     transform: translateY(-2px);
 }
 
-.setup-container img{
+.setup-container img {
     max-width: 100%;
     height: auto;
     filter: drop-shadow(6px 2px 5px rgba(254, 179, 232, 0.989));
@@ -155,24 +165,27 @@
     white-space: nowrap;
     width: fit-content;
 }
-.homebtn button::after{
+
+.homebtn button::after {
     background-clip: padding-box;
-  background-color: #7d136c;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  bottom: -4px;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
+    background-color: #7d136c;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
 }
-.homebtn button:focus{
+
+.homebtn button:focus {
     user-select: auto;
 }
-.homebtn button:hover:not(:disabled){
+
+.homebtn button:hover:not(:disabled) {
     filter: brightness(1.5);
     -webkit-filter: brightness(1.5);
 }

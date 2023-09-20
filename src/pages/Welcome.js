@@ -9,7 +9,9 @@ function Welcome() {
     return (
         <>
             <Header />
-         
+         <section className='welcome-text'>
+            <p>Welcome to Drink Bitch! An online game platform aimed for the girls who love to drink. </p>
+         </section>
             <section className='link-section'>
                 <Link to="/setup">
                     <button>Trivia →</button>
