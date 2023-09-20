@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from 'react-router-dom';
 import Header from "../components/Header";
 import './Wordguess.css';
+import WGG from '../images/WGG.png';
 import Drink from './Drink';
 
 const sampleWords = [
@@ -453,7 +454,7 @@ function Wordguess() {
                 <Drink />
             ) : (
                 <div className="container">
-                    <h1>WORD GUESS GAME</h1>
+                    <img src={WGG} alt="Word Guess Game" />
                     <div className="game-container">
                         <div className="word-container">
                             {Array.from(wordData.word).map((letter, index) => (
@@ -466,7 +467,7 @@ function Wordguess() {
                                 </div>
                             ))}
                         </div>
-                        <p className="word-description">{wordData.description}</p>
+                        <p className="word-description">Clue:  {wordData.description}</p>
                         {msg && (
                             <div className="message">
                                 <p>{msg}</p>
@@ -477,13 +478,6 @@ function Wordguess() {
                             <div className="guess-section">
                                 <button onClick={restartGameFunction} className="restart-button">
                                     New Word
-                                </button>
-                                <button
-                                    onClick={removeCharacterFunction}
-                                    disabled={!chosenLetters.length}
-                                    className="remove-button"
-                                >
-                                    Remove Letter
                                 </button>
                             </div>
                             <div className="letter-selection">{displayLettersFunction()}</div>
