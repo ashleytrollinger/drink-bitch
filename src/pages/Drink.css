@@ -5,8 +5,14 @@
 
 .p p {
     text-align: center;
-    padding-bottom: 10vh;
-    margin-top: -2vh;
+    padding-bottom:7vh;
+    margin-top: 2vh;
     font-family: 'Basic', sans-serif;
     font-size: 2.5vh;
+}
+
+@media(max-width:907px){
+    .p p{
+        padding-bottom: 0;
+    }
 }

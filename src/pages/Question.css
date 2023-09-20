@@ -32,6 +32,23 @@
     background-color: #F4EFF4;
 }
 
+.homebtn {
+    align-items: center;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.img-con{
+    text-align: center;
+
+}
+
+.img-con img{
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(6px 2px 5px rgba(254, 179, 232, 0.989));
+}
+
 .question-container {
     display: flex;
     flex-direction: column;
@@ -41,7 +58,7 @@
     background-color: rgb(234, 222, 234);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(57, 3, 39, 0.989);
-    height: 50vh;
+    height: auto;
     width: 90vw;
     margin-left: 3vw;
 }

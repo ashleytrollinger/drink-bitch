@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header'
+import TG from '../images/TG.png';
 import Timer from '../components/Timer';
 import Drink from './Drink';
 import './Question.css';
@@ -80,39 +81,44 @@ function Question() {
     return (
         <>
             <Header />
-            <section className='back-to-menu'>
-                <Link to="/setup">
-                    <button>← Back to Setup</button>
-                </Link>
+            <section className='img-con'>
+                <img src={TG} alt="Trivia Game"></img>
+                <div className='question-container' style={{ display: showDrink ? 'none' : 'block' }}>
+                    {
+                        questions ? (
+                            <div>
+                                <Timer key={timerKey} initialTime={60} onTimeout={handleTimeout} />
+                                <h2>Question {currentQuestionIndex + 1}</h2>
+                                <p className='question-text'>{questions[currentQuestionIndex].question.replace(/&quot;/g, '"')
+                                    .replace(/&#039;/g, "'")}
+                                </p>
+                                <ul className='answer-list'>
+                                    {shuffledAnswers.map((answer, index) => (
+                                        <li key={index}>
+                                            <button
+                                                onClick={() => handleAnswerClick(answer)}
+                                                className={isAnswerCorrect === null ? '' : isAnswerCorrect ? 'correct' : 'incorrect'}
+                                            >
+                                                {answer}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ) : (
+                            <p>No question data available.</p>
+                        )
+                    }
+
+                </div >
+                <section className='homebtn'>
+                    <Link to="/">
+                        <button>← Back to Home</button>
+                    </Link>
+                </section>
             </section>
-            <div className='question-container' style={{ display: showDrink ? 'none' : 'block' }}>
-                {
-                    questions ? (
-                        <div>
-                            <Timer key={timerKey} initialTime={60} onTimeout={handleTimeout} />
-                            <h2>Question {currentQuestionIndex + 1}</h2>
-                            <p className='question-text'>{questions[currentQuestionIndex].question.replace(/&quot;/g, '"')
-                                .replace(/&#039;/g, "'")}
-                            </p>
-                            <ul className='answer-list'>
-                                {shuffledAnswers.map((answer, index) => (
-                                    <li key={index}>
-                                        <button
-                                            onClick={() => handleAnswerClick(answer)}
-                                            className={isAnswerCorrect === null ? '' : isAnswerCorrect ? 'correct' : 'incorrect'}
-                                        >
-                                            {answer}
-                                        </button>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ) : (
-                        <p>No question data available.</p>
-                    )
-                }
-            </div >
             {showDrink && <Drink />}
+
         </>
     );
 }
