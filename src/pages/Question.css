@@ -46,7 +46,6 @@
 .img-con img{
     max-width: 100%;
     height: auto;
-    filter: drop-shadow(6px 2px 5px rgba(254, 179, 232, 0.989));
 }
 
 .question-container {
@@ -93,21 +92,41 @@
 }
 
 .question-container button {
-    padding: 10px 20px;
+    padding: 16px 21px;
     margin: 5px;
+    outline: 0;
+    position: relative;
     border: solid 2px #7d136c;
     cursor: pointer;
     font-size: 4vh;
-    border-radius: 5px;
+    border-radius: 125px;
     background-color: #F4EFF4;
     /* Default background color for buttons */
     color: #000;
     font-family: 'Basic', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.question-container button::before{
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: "";
+    height: 50%;
+    left: 4%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    transition: all .3s;
+    width: 92%;
 }
 
 .question-container button:hover {
     background-color: #7d136c;
-    color: rgb(234, 222, 234);
+    color: rgb(234, 222, 234); 
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
 }
 
 .correct {
