@@ -61,24 +61,27 @@
     white-space: nowrap;
     width: 100%;
 }
-.link-section button::after{
+
+.link-section button::after {
     background-clip: padding-box;
-  background-color: #7d136c;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  bottom: -4px;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
+    background-color: #7d136c;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
 }
-.link-section button:focus{
+
+.link-section button:focus {
     user-select: auto;
 }
-.link-section button:hover:not(:disabled){
+
+.link-section button:hover:not(:disabled) {
     filter: brightness(1.5);
     -webkit-filter: brightness(1.5);
 }
@@ -106,6 +109,11 @@
     .image-container {
         margin-top: -7vh;
         ;
+    }
+
+    .link-section {
+        flex-direction: column;
+        gap: 15px;
     }
 
     .link-section button {

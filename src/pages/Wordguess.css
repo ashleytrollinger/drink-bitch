@@ -22,7 +22,7 @@
 .container img {
     max-width: 100%;
     height: auto;
-    filter: drop-shadow(6px 2px 5px rgba(105, 12, 74, 0.989));
+    filter: drop-shadow(6px 2px 5px rgba(254, 179, 232, 0.989));
 }
 
 .game-container {
