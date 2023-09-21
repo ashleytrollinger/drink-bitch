@@ -8,6 +8,9 @@ import WTF from './pages/WTF';
 import Done from './pages/Done';
 import Cocktail from './pages/Cocktail';
 import Wordguess from './pages/Wordguess';
+import TruthOrDare from './pages/TruthDare';
+import WouldYouRather from './pages/WouldYa';
+import NeverHaveIEver from './pages/Never';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
           <Route path="/finished" element={<Done />} />
           <Route path="/cocktails" element={<Cocktail />} />
           <Route path="/wordGuess" element={<Wordguess />} />
+          <Route path="/truthOrDare" element={<TruthOrDare />} /> 
+          <Route path="/wouldYouRather" element={<WouldYouRather />} />
+          <Route path="/neverHaveIEver" element={<NeverHaveIEver />} />
         </Routes>
       </div>
     </Router>

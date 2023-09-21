@@ -107,22 +107,24 @@ function Cocktail() {
         <div>
             <Header /> {/* Add the Header component */}
             <section className='cocktail'>
-                <button onClick={fetchRandomCocktail}>Generate Random Cocktail</button>
-                {randomCocktail && !selectedLiquor && (
-                    <div>
-                        {renderInstructionsAndIngredients(randomCocktail)}
-                    </div>
-                )}
-                <h1>OR</h1>
-                <h2>Random Drink by Selected Liquor</h2>
-                <select onChange={(e) => setSelectedLiquor(e.target.value)}>
-                    <option value="">Select Liquor</option>
-                    {alcohols.map((alcohol) => (
-                        <option key={alcohol} value={alcohol}>
-                            {alcohol}
-                        </option>
-                    ))}
-                </select>
+                <div className='button-and-dropdown'>
+                    <button onClick={fetchRandomCocktail}>Generate Random Cocktail</button>
+                    {randomCocktail && !selectedLiquor && (
+                        <div>
+                            {renderInstructionsAndIngredients(randomCocktail)}
+                        </div>
+                    )}
+                    <h1>OR</h1>
+                    <h2>Random Drink by Selected Liquor</h2>
+                    <select onChange={(e) => setSelectedLiquor(e.target.value)}>
+                        <option value="">Select Liquor</option>
+                        {alcohols.map((alcohol) => (
+                            <option key={alcohol} value={alcohol}>
+                                {alcohol}
+                            </option>
+                        ))}
+                    </select>
+                </div>
                 {detailedDrinkInfo && (
                     <div>
                         {renderInstructionsAndIngredients(detailedDrinkInfo)}

@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Basic';
+    src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Crosant';
+    src: url('../fonts/Croissant_One/CroissantOne-Regular.ttf') format('truetype')
+}
+
+.tod-body {
+    margin-top: -6vh;
+}
+
+.image-con {
+    text-align: center;
+}
+
+.tord-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(234, 222, 234);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(57, 3, 39, 0.989);
+    height: auto;
+    width: 90vw;
+    margin-left: 3vw;
+    font-family: 'Basic', sans-serif;
+}
+
+.rating {
+    font-size: 3vh;
+}
+
+.rating select {
+    font-size: 3vh;
+    font-family: 'Basic', sans-serif;
+    margin-left: 1vw;
+    border-radius: 15px;
+    padding: 2px 4px;
+}
+
+.btn-class {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-class button {
+    display: inline-block;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    will-change: box-shadow, transform;
+    background: #F4EFF4;
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    padding: 22px;
+    font-size: 3.5vh;
+    font-weight: bold;
+    border-radius: 45px;
+    color: #7d136c;
+    font-family: 'Basic', sans-serif;
+}
+
+.btn-class button:hover {
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    transform: translateY(-2px);
+}
+
+.btn-class button:active {
+    box-shadow: inset 0px 3px 7px #d6d6e7;
+    transform: translateY(2px);
+}
+
+.btn-class p {
+    font-size: 3vh;
+    font-family: 'Crosant', sans-serif;
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+}
+
+.populated {
+    font-family: 'Basic', sans-serif;
+    font-size: 2.75vh;
+    text-align: center;
+}
+
+
+.tod-body .back-section{
+    margin-top: 2vh;
+}
