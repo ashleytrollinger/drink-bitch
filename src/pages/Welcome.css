@@ -8,11 +8,12 @@
     src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
 }
 
-.welcome-text{
+.welcome-text {
     text-align: center;
     font-family: 'Basic', sans-serif;
     font-size: 3vh;
 }
+
 .image-container {
     display: flex;
     justify-content: center;
@@ -96,7 +97,7 @@
     display: flex;
     justify-content: center;
     margin-top: 3vh;
-    gap:3px;
+    gap: 3px;
 
 }
 
@@ -157,6 +158,15 @@
     filter: brightness(1.5);
     -webkit-filter: brightness(1.5);
 }
+
+.footer {
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
 
 @media (max-width:912px) {
     .image-container {

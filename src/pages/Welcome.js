@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WelcomeI from '../images/WelcomeI.png';
 import './Welcome.css';
@@ -38,7 +38,7 @@ function Welcome() {
                     <button >WTF is This?</button>
                 </Link>
             </section>
-
+            <Footer className='footer' />
 
         </>
     );
