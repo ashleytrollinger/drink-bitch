@@ -1,4 +1,4 @@
-.WYR{
+.WYR {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,4 +12,11 @@
     margin-left: 3vw;
     font-family: 'Basic', sans-serif;
     margin-bottom: 2vh;
+}
+
+
+@media (max-width: 800px) {
+    .WYR {
+        width: 86vw;
+    }
 }

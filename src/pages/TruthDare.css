@@ -89,7 +89,17 @@
     text-align: center;
 }
 
+.poptod {
+    font-size: 3.5vh;
+}
 
-.tod-body .back-section{
+.tod-body .back-section {
     margin-top: 2vh;
+}
+
+
+@media (max-width: 800px) {
+    .tord-section {
+        width: 84vw;
+    }
 }

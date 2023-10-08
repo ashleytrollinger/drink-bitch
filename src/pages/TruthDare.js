@@ -79,10 +79,10 @@ function TruthOrDare() {
                     </div>
                     <div className='populated'>
                         {selectedOption === 'truth' && (
-                            <p>Truth: {truth}</p>
+                            <p className='poptod'>Truth: {truth}</p>
                         )}
                         {selectedOption === 'dare' && (
-                            <p>Dare: {dare}</p>
+                            <p className='poptod'>Dare: {dare}</p>
                         )}
                         {selectedOption === 'truth' && (
                             <p>If you choose not to do the truth or dare, you must have {randomSips} sip(s).</p>

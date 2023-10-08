@@ -41,6 +41,7 @@ function Welcome() {
                     <button >WTF is This?</button>
                 </Link>
             </section>
+        
             <Footer className='footer' />
 
         </>
