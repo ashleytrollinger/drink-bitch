@@ -391,6 +391,10 @@ function Wordguess() {
             if (!wordData.word.includes(letter)) {
                 setWrongGuesses(wrongGuesses + 1);
             }
+            const letterButton = document.querySelector(`.letter-button[data-letter="${letter}"]`);
+            if (letterButton) {
+                letterButton.classList.add('selected');
+            }
         }
     };
 

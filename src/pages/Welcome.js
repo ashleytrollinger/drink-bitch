@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import WelcomeI from '../images/WelcomeI.png';
+
 import './Welcome.css';
 
 function Welcome() {
@@ -10,7 +10,7 @@ function Welcome() {
         <>
             <Header />
             <section className='welcome-text'>
-                <p>Welcome to Drink Bitch! An online game platform aimed for the girls who love to drink. </p>
+                <p>Welcome to Lets Wine! An online game platform aimed for the girls who love to drink. Each game has its own set of regulations that determine how much you drink. Tried and true you and the girls should be spilling <em>ALLLL</em> the tea after 30 minutes...  </p>
             </section>
 
             <section className='link-section'>
@@ -28,6 +28,9 @@ function Welcome() {
                 </Link>
                 <Link to='/neverHaveIEver'>
                     <button>Never Have I Ever →</button>
+                </Link>
+                <Link to='/whichbtch'>
+                    <button>Which B*tch →</button>
                 </Link>
             </section>
             <section className='wtf'>

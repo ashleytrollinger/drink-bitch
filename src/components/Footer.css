@@ -1,9 +1,14 @@
+@font-face {
+    font-family: 'Basic';
+    src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
+}
+
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 1rem;
-
+    font-family: 'Basic', sans-serif;
     margin-top: 0;
 }
 

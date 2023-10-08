@@ -16,8 +16,8 @@ function TruthOrDare() {
     };
 
     const generateRandomSips = () => {
-        // Generate a random number between 1 and 6
-        const randomSipCount = Math.floor(Math.random() * 6) + 1;
+        // Generate a random number between 1 and 3
+        const randomSipCount = Math.floor(Math.random() * 3) + 1;
         setRandomSips(randomSipCount);
     };
 

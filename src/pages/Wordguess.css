@@ -15,8 +15,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -6vh;
-
 }
 
 .container img {
@@ -152,6 +150,11 @@
 .letter-button:active {
     box-shadow: inset 0px 3px 7px #d6d6e7;
     transform: translateY(2px);
+}
+
+.letter-button.selected {
+    background: #c3a7c3;
+    color: rgb(89, 89, 89);
 }
 
 .hints {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 // Importing logos
 import github from "../images/githubmark.png";
@@ -7,45 +8,7 @@ import linkedin from "../images/linkedin.png";
 export default function Footer() {
     return (
         <footer className="footer">
-            <div>
-                <a
-                    href="https://github.com/ashleytrollinger"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img
-                        src={github}
-                        alt="Github"
-                        className="logo"
-                    ></img>
-                </a>
-            </div>
-            <div>
-                <a
-                    href="https://linkedin.com/in/ashley-trollinger-a3276826a/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img
-                        src={linkedin}
-                        alt="LinkedIn"
-                        className="logo"
-                    ></img>
-                </a>
-            </div>
-            <div>
-                <a
-                    href="https://www.instagram.com/ashaleetalotta/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img
-                        src={instagram}
-                        alt="Instagram"
-                        className="logo"
-                    ></img>
-                </a>
-            </div>
+      <p>©All right and credits to the UI and concept reserved to Ashley Trollinger. All other credits can be found in the <Link to='/wtf'>WTF</Link> section©</p>
         </footer>
     )
 }

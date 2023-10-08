@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from
-    'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import NHIE from '../images/NHIE.png';
 import './Never.css';
 
-function NeverHaveIEver() {
+function WhichBitch() {
     const [prompt, setPrompt] = useState('');
     const [rating, setRating] = useState('pg13'); // Default rating
     const [randomSips, setRandomSips] = useState(null);
 
-    // Function to fetch a random "Never Have I Ever" prompt
+    // Function to fetch a random "Which B*tch" prompt
     const fetchRandomPrompt = async () => {
         try {
             const randomRating = Math.random() < 0.5 ? 'pg13' : 'r';
 
-            const response = await fetch(`https://api.truthordarebot.xyz/api/nhie?rating=${randomRating}`);
+            const response = await fetch(`https://api.truthordarebot.xyz/api/paranoia?rating=${randomRating}`);
             if (!response.ok) {
-                throw new Error('Failed to fetch NHIE prompt.');
+                throw new Error('Failed to fetch "Which B*tch" prompt.');
             }
             const data = await response.json();
             setPrompt(data.question);
@@ -31,7 +30,7 @@ function NeverHaveIEver() {
                 setRandomSips(null);
             }
         } catch (error) {
-            console.error('Error fetching NHIE prompt:', error);
+            console.error('Error fetching "Which B*tch" prompt:', error);
         }
     };
 
@@ -44,7 +43,7 @@ function NeverHaveIEver() {
         <>
             <Header />
             <section className='nhie'>
-            <img src={NHIE} alt="Never Have I Ever"></img>
+                <img src={NHIE} alt="Which B*tch"></img>
             </section>
             <div className='WYR'>
                 <div className='btn-class'>
@@ -53,7 +52,7 @@ function NeverHaveIEver() {
                 <div className='populated'>
                     <p>{prompt}</p>
                     {randomSips !== null && (
-                        <p>If you've ever done this, you must take {randomSips} sip(s).</p>
+                        <p>If you are the one voted, take {randomSips} sip(s).</p>
                     )}
                 </div>
             </div>
@@ -66,4 +65,5 @@ function NeverHaveIEver() {
     );
 }
 
-export default NeverHaveIEver;
+export default WhichBitch;
+
