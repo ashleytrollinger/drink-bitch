@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import NHIE from '../images/NHIE.png';
+import WHICH from '../images/Which.png';
 import './Never.css';
 
 function WhichBitch() {
@@ -43,7 +43,7 @@ function WhichBitch() {
         <>
             <Header />
             <section className='nhie'>
-                <img src={NHIE} alt="Which B*tch"></img>
+                <img src={WHICH} alt="Which B*tch"></img>
             </section>
             <div className='WYR'>
                 <div className='btn-class'>

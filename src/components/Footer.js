@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
-// Importing logos
-import github from "../images/githubmark.png";
-import instagram from "../images/instagram-icon.png";
-import linkedin from "../images/linkedin.png";
 export default function Footer() {
     return (
         <footer className="footer">
