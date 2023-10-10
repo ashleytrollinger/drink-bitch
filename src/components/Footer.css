@@ -19,6 +19,8 @@ body {
     padding-bottom: 1rem;
     font-family: 'Basic', sans-serif;
     margin-top: 0;
+    position: fixed;
+    bottom: 0;
 }
 
 .footer-container {
@@ -28,12 +30,12 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
-    position: relative;
+
 }
 
 .sig img {
-    max-width: 100%;
-
+    max-width: 50%;
+    padding-bottom: 2vh;
 }
 
 
@@ -41,6 +43,7 @@ body {
 
 @media (max-width: 800px) {
     .sig img {
-        width: 40%;
+        width: 35%;
+        padding-bottom: 5vh;
     }
 }

@@ -90,6 +90,8 @@
 .link-section button:hover:not(:disabled) {
     filter: brightness(1.5);
     -webkit-filter: brightness(1.5);
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    transform: translateY(-2px);
 }
 
 .wtf {
@@ -104,7 +106,6 @@
     font-size: 2vh;
     border-radius: 25px;
     margin-top: 5vh;
-    padding: .25em;
     background-color: #611054;
     color: #f4eff4;
     font-family: 'Crosant', sans-serif;
@@ -132,6 +133,17 @@
     vertical-align: middle;
     white-space: nowrap;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.button-thumb {
+    width: 18vw;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    margin-bottom: 1.5vh;
 }
 
 .wtf button::after {
@@ -156,6 +168,8 @@
 .wtf button:hover:not(:disabled) {
     filter: brightness(1.5);
     -webkit-filter: brightness(1.5);
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    transform: translateY(-2px);
 }
 
 .footer {
@@ -185,7 +199,7 @@
     }
 
     .link-section button {
-        font-size: 1.5vh;
+        font-size: 2.75vh;
         padding: 5px 10px;
     }
 

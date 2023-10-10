@@ -436,7 +436,7 @@ function Wordguess() {
         if (checkWordGuessedFunction()) {
             setMsg("Correct! Take a shot or give a shot... whatever you consider winning😉");
         } else {
-            setMsg("Wrong. Finish your drink and start over. I programmed this and do not know how this end point could hit");
+            setMsg("Wrong. I think whoever guessed this has to take a shot. They lose this round.");
             setDisplayWord(true);
         }
     };
@@ -471,7 +471,7 @@ function Wordguess() {
                                 </div>
                             ))}
                         </div>
-                        <p className="word-description">Clue:  {wordData.description}</p>
+                        <p className="word-description ">Clue:  {wordData.description}</p>
                         {msg && (
                             <div className="message">
                                 <p>{msg}</p>

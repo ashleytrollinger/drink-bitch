@@ -10,16 +10,10 @@ function Welcome() {
         <>
             <Header />
             <section className='welcome-text'>
-                <p>Welcome to Lets Wine! An online game platform aimed for the girls who love to drink. Each game has its own set of regulations that determine how much you drink. Tried and true you and the girls should be spilling <em>ALLLL</em> the tea after 30 minutes...  </p>
+                <p>Welcome to GirlsGetGone! An online game platform aimed for the girls who love to drink. Each game has its own set of regulations that determine how much you drink. Tried and true you and the girls should be spilling <em>ALLLL</em> the tea after 30 minutes...  </p>
             </section>
 
             <section className='link-section'>
-                <Link to="/setup">
-                    <button>Trivia →</button>
-                </Link>
-                <Link to='/wordGuess'>
-                    <button>Word Guess →</button>
-                </Link>
                 <Link to='/truthOrDare'>
                     <button>Truth or Dare →</button>
                 </Link>
@@ -32,6 +26,13 @@ function Welcome() {
                 <Link to='/whichbtch'>
                     <button>Which B*tch →</button>
                 </Link>
+                <Link to="/setup">
+                    <button>
+                        Trivia →</button>
+                </Link>
+                <Link to='/wordGuess'>
+                    <button> Word Guess →</button>
+                </Link>
             </section>
             <section className='wtf'>
                 <Link to='/cocktails'>
@@ -41,7 +42,7 @@ function Welcome() {
                     <button >WTF is This?</button>
                 </Link>
             </section>
-        
+
             <Footer className='footer' />
 
         </>

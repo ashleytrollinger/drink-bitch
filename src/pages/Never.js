@@ -3,6 +3,7 @@ import React, { useState, useEffect } from
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import NHIE from '../images/NHIE.png';
+import QUESTION from '../images/QUESTION.png';
 import './Never.css';
 
 function NeverHaveIEver() {
@@ -48,12 +49,12 @@ function NeverHaveIEver() {
             </section>
             <div className='WYR'>
                 <div className='btn-class'>
-                    <button onClick={fetchRandomPrompt}>Get Prompt</button>
+                    <button onClick={fetchRandomPrompt}><img src={QUESTION} alt='Get Prompt'></img></button>
                 </div>
                 <div className='populated'>
-                    <p>{prompt}</p>
+                    <p className='poptod'>{prompt}</p>
                     {randomSips !== null && (
-                        <p>If you've ever done this, you must take {randomSips} sip(s).</p>
+                        <p>If you've ever done this, you must take <span className='pulse'>{randomSips} sip(s).</span></p>
                     )}
                 </div>
             </div>

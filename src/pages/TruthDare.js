@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import TOD from '../images/TOD.png';
+import TRUTH from '../images/TRUTH.png';
+import DARE from '../images/DARE.png';
 import './TruthDare.css';
 
 function TruthOrDare() {
@@ -73,9 +75,9 @@ function TruthOrDare() {
                         </label>
                     </div>
                     <div className='btn-class'>
-                        <button onClick={fetchTruth}>TRUTH</button>
+                        <button onClick={fetchTruth}><img src={TRUTH} alt='TRUTH'></img></button>
                         <p>OR</p>
-                        <button onClick={fetchDare}>DARE</button>
+                        <button onClick={fetchDare}><img src={DARE} alt='DARE'></img></button>
                     </div>
                     <div className='populated'>
                         {selectedOption === 'truth' && (
@@ -85,10 +87,10 @@ function TruthOrDare() {
                             <p className='poptod'>Dare: {dare}</p>
                         )}
                         {selectedOption === 'truth' && (
-                            <p>If you choose not to do the truth or dare, you must have {randomSips} sip(s).</p>
+                            <p>If you choose not to do the truth or dare, you must have <span className='pulse'>{randomSips} sip(s).</span></p>
                         )}
                         {selectedOption === 'dare' && (
-                            <p>If you choose not to do the dare or truth, you must have {randomSips} sip(s).</p>
+                            <p>If you choose not to do the dare or truth, you must take <span className='pulse'>{randomSips} sip(s).</span></p>
                         )}
                     </div>
                 </section>
