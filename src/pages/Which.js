@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import WHICH from '../images/Which.png';
-import QUESTION from '../images/QUESTION.png';
+
 import './Never.css';
 
 function WhichBitch() {
@@ -48,7 +48,7 @@ function WhichBitch() {
             </section>
             <div className='WYR'>
                 <div className='btn-class'>
-                    <button onClick={fetchRandomPrompt}><img src={QUESTION} alt='Get Prompt'></img></button>
+                    <button onClick={fetchRandomPrompt}>GET QUESTION</button>
                 </div>
                 <div className='populated'>
                     <p className='poptod'>{prompt}</p>

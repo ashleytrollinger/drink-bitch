@@ -115,9 +115,9 @@ function Cocktail() {
                         </div>
                     )}
                     <h1>OR</h1>
-                    <h2>Random Drink by Selected Liquor</h2>
+                  
                     <select onChange={(e) => setSelectedLiquor(e.target.value)}>
-                        <option value="">Select Liquor</option>
+                        <option value="">SELECT LIQUOR</option>
                         {alcohols.map((alcohol) => (
                             <option key={alcohol} value={alcohol}>
                                 {alcohol}

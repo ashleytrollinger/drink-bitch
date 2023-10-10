@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 import WYR from '../images/WYR.png';
-import QUESTION from '../images/QUESTION.png';
+
 import './WouldYa.css';
 
 function WouldYouRather() {
@@ -43,7 +43,7 @@ function WouldYouRather() {
                     </label>
                 </div>
                 <div className='btn-class'>
-                    <button onClick={fetchWouldYouRather}><img src={QUESTION} alt='Get Prompt'></img></button>
+                    <button onClick={fetchWouldYouRather}>GET QUESTION</button>
                 </div>
                 {question && (
                     <div className='populated'>

@@ -10,7 +10,7 @@ function Welcome() {
         <>
             <Header />
             <section className='welcome-text'>
-                <p>Welcome to GirlsGetGone! An online game platform aimed for the girls who love to drink. Each game has its own set of regulations that determine how much you drink. Tried and true you and the girls should be spilling <em>ALLLL</em> the tea after 30 minutes...  </p>
+                <p>Welcome to GirlsGoWild! An online game platform aimed for the girls who love to drink but cant think of how to get the party started. Each game has its own set of regulations that determine how much you drink. Tried and true you and the girls should be spilling <em>ALLLL</em> the tea after 30 minutes...  </p>
             </section>
 
             <section className='link-section'>

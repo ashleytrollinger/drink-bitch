@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import TOD from '../images/TOD.png';
-import TRUTH from '../images/TRUTH.png';
-import DARE from '../images/DARE.png';
+
 import './TruthDare.css';
 
 function TruthOrDare() {
@@ -75,9 +74,9 @@ function TruthOrDare() {
                         </label>
                     </div>
                     <div className='btn-class'>
-                        <button onClick={fetchTruth}><img src={TRUTH} alt='TRUTH'></img></button>
+                        <button onClick={fetchTruth}>TRUTH</button>
                         <p>OR</p>
-                        <button onClick={fetchDare}><img src={DARE} alt='DARE'></img></button>
+                        <button onClick={fetchDare}>DARE</button>
                     </div>
                     <div className='populated'>
                         {selectedOption === 'truth' && (
