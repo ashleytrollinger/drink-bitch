@@ -41,7 +41,7 @@
     box-shadow: 0px 0px 10px rgba(57, 3, 39, 0.989);
     height: auto;
     width: 90vw;
-    margin-left: 5vw;
+    margin-left: 3vw;
     font-family: 'Basic', sans-serif;
 }
 
@@ -160,7 +160,8 @@
     }
 
     .btn-class button {
-        font-size: 3vh;
+        font-size: 3.75vh;
+        
     }
 
 }
