@@ -1,0 +1,105 @@
+.body {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3vh;
+    gap: 3vw;
+    background-color: rgb(234, 222, 234);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(57, 3, 39, 0.989);
+    width: 90vw;
+    margin-left: 5vw;
+    padding: 3vh;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+}
+
+.inputs input[type="text"],
+.inputs input[type="color"] {
+    height: 4vh;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.addItem {
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 3vh;
+    align-items: center;
+
+}
+
+.addItem input {
+    font-size: 3.5vh;
+    border-radius: 12px;
+    padding: 3px;
+    margin-top: 2vh;
+}
+
+.addItem button {
+    font-size: 3vh;
+    margin-top: 2vh;
+    background-color: #611054;
+    color: #f4eff4;
+    font-family: 'Crosant', sans-serif;
+    border: solid transparent;
+    border-radius: 96px;
+    border-width: 0 0 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    outline: none;
+    overflow: visible;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.addItem button::after {
+    background-clip: padding-box;
+    background-color: #7d136c;
+    border: solid transparent;
+    border-radius: 96px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.addItem button:focus {
+    user-select: auto;
+}
+
+.addItem button:hover:not(:disabled) {
+    filter: brightness(1.5);
+    -webkit-filter: brightness(1.5);
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 800px) {
+    .body {
+        flex-direction: column;
+
+    }
+
+}

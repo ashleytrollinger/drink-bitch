@@ -17,7 +17,7 @@ function Spinner() {
         <>
         <div className="body">
             <div className="container">
-                <div className="spinBtn" onClick={handleSpinClick}> Spin</div>
+                <div className="spinBtn" onClick={handleSpinClick}> SPIN</div>
                 <div className="wheel" style={wheelStyle}>
                     <div className="sips" style={{ '--i': 1, '--clr': '#fc8eac' }}><span>3 Sips</span></div>
                     <div className="sips" style={{ '--i': 2, '--clr': '#ff3ec7' }}><span>5 Sips</span></div>

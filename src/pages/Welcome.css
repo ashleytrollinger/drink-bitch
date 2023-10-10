@@ -12,7 +12,7 @@
     text-align: center;
     font-family: 'Basic', sans-serif;
     font-size: 3vh;
-    padding: 2vh 2vh;
+    padding: 2vh 10vh;
 }
 
 .image-container {
@@ -95,6 +95,7 @@
     transform: translateY(-2px);
 }
 
+
 .wtf {
     display: flex;
     justify-content: center;
@@ -175,7 +176,7 @@
 
 .footer {
     margin-top: auto;
-    position: absolute;
+    position:sticky;
     bottom: 0;
     width: 100%;
     height: 2.5rem;

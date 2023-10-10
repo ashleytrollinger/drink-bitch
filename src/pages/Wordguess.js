@@ -457,7 +457,7 @@ function Wordguess() {
             {showDrink ? (
                 <Drink />
             ) : (
-                <div className="container">
+                <div className="container1">
                     <img src={WGG} alt="Word Guess Game" />
                     <div className="game-container">
                         <div className="word-container">

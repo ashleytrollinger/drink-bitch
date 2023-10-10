@@ -8,7 +8,7 @@
     src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype')
 }
 
-.container {
+.container1 {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-.container img {
+.container1 img {
     max-width: 100%;
     height: auto;
 }
@@ -204,11 +204,9 @@
 
 
 @media (max-width:800px) {
-    .container {
-        margin-top: 15vh;
-    }
+ 
 
-    .container img {
+    .container1 img {
         margin-top: 2vh;
     }
 

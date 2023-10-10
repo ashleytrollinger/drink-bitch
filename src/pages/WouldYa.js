@@ -7,7 +7,7 @@ import './WouldYa.css';
 
 function WouldYouRather() {
     const [question, setQuestion] = useState('');
-    const [rating, setRating] = useState('PG'); // Default rating
+    const [rating, setRating] = useState('PG13'); // Default rating
 
     const handleRatingChange = (event) => {
         setRating(event.target.value); // Update the selected rating
@@ -37,7 +37,7 @@ function WouldYouRather() {
                     <label className='rating'>
                         Select Rating:
                         <select value={rating} onChange={handleRatingChange}>
-                            <option value="PG">PG13</option>
+                            <option value="PG13">PG13</option>
                             <option value="R">R</option>
                         </select>
                     </label>

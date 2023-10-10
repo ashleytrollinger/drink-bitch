@@ -41,7 +41,7 @@
     box-shadow: 0px 0px 10px rgba(57, 3, 39, 0.989);
     height: auto;
     width: 90vw;
-    margin-left: 3vw;
+    margin-left: 5vw;
     font-family: 'Basic', sans-serif;
 }
 
@@ -156,8 +156,7 @@
 
 @media (max-width: 800px) {
     .tord-section {
-        width: 84vw;
-        margin-left: 0;
+        margin-left: 2vh;
     }
 
     .btn-class button {

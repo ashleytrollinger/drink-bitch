@@ -12,6 +12,7 @@ import TruthOrDare from './pages/TruthDare';
 import WouldYouRather from './pages/WouldYa';
 import NeverHaveIEver from './pages/Never';
 import Which from './pages/Which';
+import Spin from './pages/Spin';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/wouldYouRather" element={<WouldYouRather />} />
           <Route path="/neverHaveIEver" element={<NeverHaveIEver />} />
           <Route path="/whichbtch" element={<Which />} />
+          <Route path="/spin" element={<Spin />} />
         </Routes>
       </div>
     </Router>

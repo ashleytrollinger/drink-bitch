@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: 'Crosant';
-    src: url('../fonts/Croissant_One/CroissantOne-Regular.ttf') format('truetype')
+    font-family: 'Nanum';
+    src: url('../fonts/Nanum_Gothic/NanumGothic-Regular.ttf') format('truetype')
 }
 
 .body {
@@ -28,7 +28,7 @@
     position: absolute;
     width: 100px;
     height: 100px;
-    background-color:  rgba(234, 222, 234, 0.785);
+    background-color:  rgb(255, 255, 255);
     border-radius: 50%;
     z-index: 10;
     display: flex;
@@ -36,7 +36,7 @@
     align-items: center;
     align-items: center;
     font-size: 4vh;
-    font-family: 'Crosant', sans-serif;
+    font-family: 'Nanum', sans-serif;
 }
 
 .container .spinBtn::before {
@@ -45,8 +45,12 @@
     top: -28px;
     width: 20px;
     height: 30px;
-    background: rgba(234, 222, 234, 0.785);
+    background: rgb(255, 255, 255);
     clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+.container .spinBtn:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
 }
 
 .container .wheel {
@@ -55,7 +59,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0);
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 0 5px #333, 0 0 0 15px black, 0 0 0 18px #111;
@@ -82,11 +86,11 @@
     font-size: 3vh;
 }
 
-@media (max-width: 912px) {
+@media (max-width: 975px) {
     .container {
         position: relative;
-        width: 400px;
-        height: 400px;
+        width: 325px;
+        height: 325px;
         display: flex;
         justify-content: center;
         align-items: center;

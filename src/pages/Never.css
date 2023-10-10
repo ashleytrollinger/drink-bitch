@@ -2,9 +2,3 @@
     text-align: center;
 }
 
-
-@media (max-width: 800px) {
-    .nhie img {
-        width: 90%;
-    }
-}

@@ -6,6 +6,7 @@ function Header() {
     return (
         <header className='header-container'>
             <img src={HeaderI} alt="Header" />
+            
         </header>
     )
 }

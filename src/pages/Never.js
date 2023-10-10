@@ -14,7 +14,7 @@ function NeverHaveIEver() {
     // Function to fetch a random "Never Have I Ever" prompt
     const fetchRandomPrompt = async () => {
         try {
-            const randomRating = Math.random() < 0.5 ? 'pg13' : 'r';
+            const randomRating = Math.random() < 0.5 ? 'r' : 'r';
 
             const response = await fetch(`https://api.truthordarebot.xyz/api/nhie?rating=${randomRating}`);
             if (!response.ok) {
