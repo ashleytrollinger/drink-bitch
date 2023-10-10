@@ -161,7 +161,11 @@
 
     .btn-class button {
         font-size: 3.75vh;
-        
+
+    }
+
+    .image-con img {
+        width: 45%;
     }
 
 }

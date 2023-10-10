@@ -204,10 +204,11 @@
 
 
 @media (max-width:800px) {
- 
+
 
     .container1 img {
         margin-top: 2vh;
+        width: 45%;
     }
 
     .letter-button {
