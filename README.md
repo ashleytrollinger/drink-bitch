@@ -20,14 +20,13 @@ Example of game page
 Example of another game page
 
 ## Screenshots iPhone Rendering
-![41A5041F-8385-4AEA-8A40-D10373DB66FB](https://github.com/ashleytrollinger/drink-bitch/assets/123582742/ee97cf21-a118-4dca-8fd6-897102cb829c)
+![IMG_1877](https://github.com/ashleytrollinger/girlsgowild/assets/123582742/e44699d7-b408-4774-b5dc-fb67260f8988)
+
 Welcome Page
+![IMG_1878](https://github.com/ashleytrollinger/girlsgowild/assets/123582742/7405ef70-fcd6-4d42-95c3-e6762fc5c547)
 
-![899F852D-F0B9-4F3E-9489-B0C8EBBF2F59](https://github.com/ashleytrollinger/drink-bitch/assets/123582742/4b7b82a0-a6cd-4dd8-94c8-f492a8b763a5)
-Trivia Page
 
-![D59A3100-3841-4F9C-B0FC-02A12693088A](https://github.com/ashleytrollinger/drink-bitch/assets/123582742/41d6c5a4-8358-4c7d-9049-6907f63b736b)
-Word Game
+Game Page
 
 ## Future Development
 I would like to create my own API to have full control over the questions being generated and loaded into the quiz to ensure correctness and correlation. More games would be ideal to give users more options as well as adding a footer to direct users to my portfolio and socials.
