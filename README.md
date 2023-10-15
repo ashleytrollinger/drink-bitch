@@ -12,22 +12,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 Drink B*tch is a web application that uses https://opentdb.com/ to generate diffferent quizzes based off a users input of quiz length, category, and difficulty. Once the unique API key is generated and the quiz populates users have 30 seconds to answer each question. If they get the question wrong or the time runs out the user is redirected to a wheel they can spin to determine how much to drink. The application was developed as a birthday present to my friend but I created it because we were wanting a quiz website that did not exist.
 
 ## Screenshots Desktop Rendering
-
-<img width="924" alt="Screenshot 2023-09-20 at 5 04 00 PM" src="https://github.com/ashleytrollinger/drink-bitch/assets/123582742/6440b789-0a41-4172-a4a0-97254e80a031">
-
-Welcome Page
-
-<img width="915" alt="Screenshot 2023-09-20 at 5 04 23 PM" src="https://github.com/ashleytrollinger/drink-bitch/assets/123582742/ad0d77a1-8de3-482b-9e04-6c7df8eb900f">
-
-Quiz Set-Up Page
-
-<img width="917" alt="Screenshot 2023-09-20 at 5 05 13 PM" src="https://github.com/ashleytrollinger/drink-bitch/assets/123582742/5a046bb4-e024-4854-9e37-9071af957d37">
-
-Question Page
-
-<img width="885" alt="Screenshot 2023-09-20 at 5 06 12 PM" src="https://github.com/ashleytrollinger/drink-bitch/assets/123582742/82ec95e6-a21b-4295-b9a4-c7e35ce6820e">
-
-Word Game
+<img width="1439" alt="Screenshot 2023-10-15 at 6 10 11 PM" src="https://github.com/ashleytrollinger/girlsgowild/assets/123582742/6cd86b20-2933-407e-b0ce-7fa9b8668ba9">
+Home Page
+<img width="1440" alt="Screenshot 2023-10-15 at 6 10 23 PM" src="https://github.com/ashleytrollinger/girlsgowild/assets/123582742/27b5c0f5-40c7-448e-9e82-2daf80c491ec">
+Example of game page
+<img width="1440" alt="Screenshot 2023-10-15 at 6 10 53 PM" src="https://github.com/ashleytrollinger/girlsgowild/assets/123582742/ab699e52-faff-4c4c-89f1-6353ed8fec63">
+Example of another game page
 
 ## Screenshots iPhone Rendering
 ![41A5041F-8385-4AEA-8A40-D10373DB66FB](https://github.com/ashleytrollinger/drink-bitch/assets/123582742/ee97cf21-a118-4dca-8fd6-897102cb829c)
