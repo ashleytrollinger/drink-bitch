@@ -39,9 +39,7 @@ function Setup() {
         <>
             <Header />
             <div className='setup-container'>
-                <section className='img-con'>
-                    <img src={TG} alt="Trivia Game"></img>
-                </section>
+
                 <form className='form-container'>
                     <div>
                         <label>How many questions do you want to try? (1-50)</label>
@@ -64,6 +62,9 @@ function Setup() {
                             <option value="19">Math</option>
                             <option value="23">History</option>
                             <option value="22">Geography</option>
+                            <option value="16">Board Games</option>
+                            <option value="30">Gadgets</option>
+                            <option value="9">General Knowledge</option>
                         </select>
                     </div>
                     <div>

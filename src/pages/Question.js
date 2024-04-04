@@ -82,7 +82,7 @@ function Question() {
         <>
             <Header />
             <section className='img-con'>
-                <img src={TG} alt="Trivia Game"></img>
+
                 <div className='question-container' style={{ display: showDrink ? 'none' : 'block' }}>
                     {
                         questions ? (
